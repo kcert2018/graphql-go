@@ -55,6 +55,8 @@ func (r *Request) Subscribe(ctx context.Context, s *resolvable.Schema, op *query
 		}
 	}()
 
+	fmt.Printf("OK-----------------------------\n")
+
 	if err != nil {
 		if _, nonNullChild := f.field.Type.(*common.NonNull); nonNullChild {
 			return sendAndReturnClosed(&Response{Errors: []*errors.QueryError{err}})
