@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/graph-gophers/graphql-go"
-	gqlerrors "github.com/graph-gophers/graphql-go/errors"
-	"github.com/graph-gophers/graphql-go/example/starwars"
-	"github.com/graph-gophers/graphql-go/gqltesting"
+	"github.com/kcert2018/graphql-go"
+	gqlerrors "github.com/kcert2018/graphql-go/errors"
+	"github.com/kcert2018/graphql-go/example/starwars"
+	"github.com/kcert2018/graphql-go/gqltesting"
 )
 
 type helloWorldResolver1 struct{}
