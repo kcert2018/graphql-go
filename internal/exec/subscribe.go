@@ -55,10 +55,9 @@ func (r *Request) Subscribe(ctx context.Context, s *resolvable.Schema, op *query
 		}
 	}()
 
-	fmt.Printf("OK----------------------------- 2\n")
-
 	if err != nil {
 		if f == nil {
+			err = errors.Errorf("%s", "fail subscribe by resover or client")
 			return sendAndReturnClosed(&Response{Errors: []*errors.QueryError{err}})
 		}
 		if _, nonNullChild := f.field.Type.(*common.NonNull); nonNullChild {
