@@ -57,7 +57,7 @@ func (r *Request) Subscribe(ctx context.Context, s *resolvable.Schema, op *query
 
 	if err != nil {
 		if f == nil {
-			err = errors.Errorf("%s", "fail subscribe by resover or client")
+			err = errors.Errorf("%s", "fail subscribe by resolver or client")
 			return sendAndReturnClosed(&Response{Errors: []*errors.QueryError{err}})
 		}
 		if _, nonNullChild := f.field.Type.(*common.NonNull); nonNullChild {
